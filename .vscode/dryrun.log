@@ -1,6 +1,13 @@
-make --dry-run --keep-going --print-directory
+make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/home/chris/Classes/hy240/HY240_project'
- 
-make: Nothing to be done for 'default'.
+gcc -Wall -g -M src/main.c | \
+	sed 's,[a-zA-Z0-9_\.]*.o:,obj/main.o:,' > dep/main.d
+gcc -Wall -g -M src/among_us.c | \
+	sed 's,[a-zA-Z0-9_\.]*.o:,obj/among_us.o:,' > dep/among_us.d
+mkdir -p obj/
+gcc -Wall -g -c src/among_us.c -o obj/among_us.o
+mkdir -p obj/
+gcc -Wall -g -c src/main.c -o obj/main.o
+gcc -Wall -g -o among_us obj/among_us.o obj/main.o -lm
 make: Leaving directory '/home/chris/Classes/hy240/HY240_project'
  

@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+dep/among_us.d:1: *** missing separator.  Stop.
+
 # GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Jun 20 14:09:00 2022
+# Make data base, printed on Mon Jun 20 14:10:28 2022
 
 # Variables
 
@@ -23,7 +25,7 @@ SNAP_INSTANCE_KEY =
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-ec2976cb-c81a-489f-8d59-df477b7e3ef4.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-05415945-a5d3-4a0f-9041-cd0d9bc56a68.sock
 # environment
 LC_NAME = en_US.UTF-8
 # environment
@@ -94,8 +96,8 @@ XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 +D = $(patsubst %/,%,$(dir $+))
 # environment
 XDG_SESSION_DESKTOP = ubuntu
-# makefile (from 'dep/main.d', line 1)
-MAKEFILE_LIST := Makefile dep/among_us.d dep/main.d
+# makefile (from 'dep/among_us.d', line 1)
+MAKEFILE_LIST := Makefile dep/among_us.d
 # environment
 SNAP_REEXEC = 
 # automatic
@@ -103,7 +105,7 @@ SNAP_REEXEC =
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 3174
+VSCODE_PID = 16973
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
@@ -190,7 +192,7 @@ DESKTOP_SESSION = ubuntu
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # makefile (from 'Makefile', line 21)
 OBJECTS = ${SOURCES:src/%.c=obj/%.o}
-# 'override' directive
+# environment
 GNUMAKEFLAGS := 
 # environment
 LOGNAME = chris
@@ -221,7 +223,7 @@ MANAGERPID = 1653
 # environment
 LC_MEASUREMENT = en_US.UTF-8
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 2489
+GIO_LAUNCHED_DESKTOP_FILE_PID = 16926
 # environment
 _ = /snap/code/99/usr/share/code/code
 # environment
@@ -282,15 +284,13 @@ SNAP_USER_DATA = /home/chris/snap/code/99
 XDG_MENU_PREFIX = gnome-
 # environment
 GDMSESSION = ubuntu
- 
-make: *** No rule to make target 'all'.  Stop.
-
 # environment
+ 
 LC_IDENTIFICATION = en_US.UTF-8
 # environment
 SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
 # variable set hash-table stats:
-# Load=138/1024=13%, Rehash=0, Collisions=12/182=7%
+# Load=138/1024=13%, Rehash=0, Collisions=9/159=6%
 
 # Pattern-specific Variable Values
 
@@ -298,129 +298,16 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 
 # Directories
 
-# dep (device 2085, inode 1048928): No files, no impossibilities so far.
-# src (device 2085, inode 1048853): 5 files, no impossibilities.
-# . (device 2085, inode 1048791): 14 files, no impossibilities.
+# src (device 2085, inode 1048856): 5 files, no impossibilities.
+# . (device 2085, inode 1048791): 12 files, no impossibilities.
 
-# 19 files, no impossibilities in 3 directories.
+# 17 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
-dep/%.d: src/%.c src/among_us.h
-#  recipe to execute (from 'Makefile', line 32):
-	@mkdir -p $(dir $@)
-	$(CC) $(CFLAGS) -M $< | \
-		sed 's,[a-zA-Z0-9_\.]*.o:,$(<:src/%.c=obj/%.o):,' > $@
+# No implicit rules.
 
-obj/%.o: src/%.c dep/%.d src/among_us.h
-#  recipe to execute (from 'Makefile', line 37):
-	@mkdir -p $(dir $@)
-	gcc $(CFLAGS) -c $< -o $@
-
-# 2 implicit rules, 0 (0.0%) terminal.
 # Files
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/wordsize.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/sys/cdefs.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/math-vector.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/time64.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/long-double.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/math.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-distclean: clean
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from 'Makefile', line 47):
-	rm -rf among_us
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/strings.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-obj/main.o: src/main.c /usr/include/stdc-predef.h /usr/include/stdio.h /usr/include/x86_64-linux-gnu/bits/libc-header-start.h /usr/include/features.h /usr/include/features-time64.h /usr/include/x86_64-linux-gnu/bits/wordsize.h /usr/include/x86_64-linux-gnu/bits/timesize.h /usr/include/x86_64-linux-gnu/sys/cdefs.h /usr/include/x86_64-linux-gnu/bits/long-double.h /usr/include/x86_64-linux-gnu/gnu/stubs.h /usr/include/x86_64-linux-gnu/gnu/stubs-64.h /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h /usr/include/x86_64-linux-gnu/bits/types.h /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/x86_64-linux-gnu/bits/time64.h /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h /usr/include/x86_64-linux-gnu/bits/types/__FILE.h /usr/include/x86_64-linux-gnu/bits/types/FILE.h /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h /usr/include/x86_64-linux-gnu/bits/stdio_lim.h /usr/include/x86_64-linux-gnu/bits/floatn.h /usr/include/x86_64-linux-gnu/bits/floatn-common.h /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h /usr/include/x86_64-linux-gnu/bits/waitstatus.h /usr/include/x86_64-linux-gnu/sys/types.h /usr/include/x86_64-linux-gnu/bits/types/clock_t.h /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h /usr/include/x86_64-linux-gnu/bits/types/time_t.h /usr/include/x86_64-linux-gnu/bits/types/timer_t.h /usr/include/x86_64-linux-gnu/bits/stdint-intn.h /usr/include/endian.h /usr/include/x86_64-linux-gnu/bits/endian.h /usr/include/x86_64-linux-gnu/bits/endianness.h /usr/include/x86_64-linux-gnu/bits/byteswap.h /usr/include/x86_64-linux-gnu/bits/uintn-identity.h /usr/include/x86_64-linux-gnu/sys/select.h /usr/include/x86_64-linux-gnu/bits/select.h /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h /usr/include/x86_64-linux-gnu/bits/struct_mutex.h /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/string.h /usr/include/x86_64-linux-gnu/bits/types/locale_t.h /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h /usr/include/strings.h /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h /usr/include/x86_64-linux-gnu/bits/wchar.h /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h src/among_us.h
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
 
 default: among_us
 #  Implicit rule search has not been done.
@@ -428,249 +315,7 @@ default: among_us
 #  File has not been updated.
 
 # Not a target:
-/usr/include/x86_64-linux-gnu/gnu/stubs.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/types.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/wchar.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/floatn.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
 Makefile:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-20 14:05:24.979798431
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/endianness.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/typesizes.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/features-time64.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-clean:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from 'Makefile', line 44):
-	rm -rf obj dep
-
-# Not a target:
-/usr/include/endian.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/time.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/features.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
- 
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/endian.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-src/main.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-20 13:55:03.617743641
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/timesize.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-dep/main.d: src/main.c src/among_us.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'main'
-#  Last modified 2022-06-20 14:06:54.990941509
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 32):
-	@mkdir -p $(dir $@)
-	$(CC) $(CFLAGS) -M $< | \
-		sed 's,[a-zA-Z0-9_\.]*.o:,$(<:src/%.c=obj/%.o):,' > $@
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/sys/types.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-obj/among_us.o: src/among_us.c /usr/include/stdc-predef.h src/among_us.h /usr/include/stdio.h /usr/include/x86_64-linux-gnu/bits/libc-header-start.h /usr/include/features.h /usr/include/features-time64.h /usr/include/x86_64-linux-gnu/bits/wordsize.h /usr/include/x86_64-linux-gnu/bits/timesize.h /usr/include/x86_64-linux-gnu/sys/cdefs.h /usr/include/x86_64-linux-gnu/bits/long-double.h /usr/include/x86_64-linux-gnu/gnu/stubs.h /usr/include/x86_64-linux-gnu/gnu/stubs-64.h /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h /usr/include/x86_64-linux-gnu/bits/types.h /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/x86_64-linux-gnu/bits/time64.h /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h /usr/include/x86_64-linux-gnu/bits/types/__FILE.h /usr/include/x86_64-linux-gnu/bits/types/FILE.h /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h /usr/include/x86_64-linux-gnu/bits/stdio_lim.h /usr/include/x86_64-linux-gnu/bits/floatn.h /usr/include/x86_64-linux-gnu/bits/floatn-common.h /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h /usr/include/x86_64-linux-gnu/bits/waitstatus.h /usr/include/x86_64-linux-gnu/sys/types.h /usr/include/x86_64-linux-gnu/bits/types/clock_t.h /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h /usr/include/x86_64-linux-gnu/bits/types/time_t.h /usr/include/x86_64-linux-gnu/bits/types/timer_t.h /usr/include/x86_64-linux-gnu/bits/stdint-intn.h /usr/include/endian.h /usr/include/x86_64-linux-gnu/bits/endian.h /usr/include/x86_64-linux-gnu/bits/endianness.h /usr/include/x86_64-linux-gnu/bits/byteswap.h /usr/include/x86_64-linux-gnu/bits/uintn-identity.h /usr/include/x86_64-linux-gnu/sys/select.h /usr/include/x86_64-linux-gnu/bits/select.h /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h /usr/include/x86_64-linux-gnu/bits/struct_mutex.h /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/string.h /usr/include/x86_64-linux-gnu/bits/types/locale_t.h /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h /usr/include/strings.h /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h /usr/include/x86_64-linux-gnu/bits/wchar.h /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h /usr/include/time.h /usr/include/x86_64-linux-gnu/bits/time.h /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/math-vector.h /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h /usr/include/x86_64-linux-gnu/bits/fp-logb.h /usr/include/x86_64-linux-gnu/bits/fp-fast.h /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h /usr/include/x86_64-linux-gnu/bits/mathcalls.h
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/stdint.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/alloca.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/string.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -682,197 +327,38 @@ obj/among_us.o: src/among_us.c /usr/include/stdc-predef.h src/among_us.h /usr/in
 #  File has not been updated.
 
 # Not a target:
-/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
 all:
 #  Command line target.
-#  Implicit rule search has been done.
-#  File does not exist.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
-/usr/include/x86_64-linux-gnu/bits/select.h:
+among_us:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
-/usr/include/stdc-predef.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/stdio.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/time.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-among_us: obj/among_us.o obj/main.o
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from 'Makefile', line 41):
-	$(CC) $(CFLAGS) -o $@ $^ -lm
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/waitflags.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
-#  Implicit rule search has not been done.
- 
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-src/among_us.h:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-20 14:04:00.324627949
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/byteswap.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-src/among_us.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-20 14:04:10.80452388
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/sys/select.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/stdlib.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-dep/among_us.d: src/among_us.c src/among_us.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'among_us'
-#  Last modified 2022-06-20 14:06:55.002941396
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 32):
-	@mkdir -p $(dir $@)
-	$(CC) $(CFLAGS) -M $< | \
-		sed 's,[a-zA-Z0-9_\.]*.o:,$(<:src/%.c=obj/%.o):,' > $@
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
+dep/among_us.d:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=88/1024=9%, Rehash=0, Collisions=8/253=3%
+# Load=7/1024=1%, Rehash=0, Collisions=0/10=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 109 / storage = 3687 B / avg = 33 B
-# current buf: size = 8162 B / used = 3687 B / count = 109 / avg = 33 B
+# strcache buffers: 1 (0) / strings = 24 / storage = 253 B / avg = 10 B
+# current buf: size = 8162 B / used = 253 B / count = 24 / avg = 10 B
 
-# strcache performance: lookups = 205 / hit rate = 46%
+# strcache performance: lookups = 33 / hit rate = 27%
 # hash-table stats:
-# Load=109/8192=1%, Rehash=0, Collisions=2/205=1%
-# Finished Make data base on Mon Jun 20 14:09:00 2022
+# Load=24/8192=0%, Rehash=0, Collisions=0/33=0%
+# Finished Make data base on Mon Jun 20 14:10:28 2022
 
  
