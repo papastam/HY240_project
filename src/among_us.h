@@ -68,20 +68,20 @@ struct Completed_Tasks_PQ
     struct HT_Task **tasks;          /*Completed tasks priority queue*/
 };
 
-unsigned int max_tasks_g; /* Max number of tasks */
-unsigned int max_tid_g;   /* Max task tid */
+extern unsigned int max_tasks_g; /* Max number of tasks */
+extern unsigned int max_tid_g;   /* Max task tid */
 
 /* Primes for your universal hashing implementation */
 extern unsigned int primes_g[650];
 
 /* Global variable, pointer to the head of the players tree */
-struct Player *players_tree;
+extern struct Player *players_tree;
 
 /* Global variable, pointer to the head of the tasks tree */
-struct General_Tasks_HT *general_tasks_ht;
+extern struct General_Tasks_HT *general_tasks_ht;
 
 /* Global variable, pointer to the top of the completed task's priority queue */
-struct Completed_Tasks_PQ *completed_tasks_pq;
+extern struct Completed_Tasks_PQ *completed_tasks_pq;
 
 /**
  * @brief Optional function to initialize data structures that 

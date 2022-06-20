@@ -87,6 +87,15 @@ int p,a,b, aliencount, playercount, curralien, currcrew, currchain, distributedt
 struct HT_Task *currnode;
 struct Player *playersentinel, *maxevidence;
 
+unsigned int max_tasks_g; /* Max number of tasks */
+unsigned int max_tid_g;   /* Max task tid */
+
+struct Player *players_tree;
+struct General_Tasks_HT *general_tasks_ht;
+struct Completed_Tasks_PQ *completed_tasks_pq;
+
+
+
 void distribute_rec(struct Player *node);
 void print_players_rec(struct Player *tree);
 void print_dl_players(struct Player *tree);

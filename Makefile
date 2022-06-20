@@ -38,7 +38,7 @@ obj/%.o: src/%.c dep/%.d $(HEADERS)
 	gcc $(CFLAGS) -c $< -o $@
 
 $(EXEC): $(OBJECTS)
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ $^ -lm
 
 clean:
 	rm -rf obj dep
