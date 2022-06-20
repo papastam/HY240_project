@@ -1,7 +1,7 @@
 # Among Us *(Data Structures Project)*
 For the [HY240](https://www.csd.uoc.gr/~hy240/current/) course we recreated the functionalith of the game Among Us using different kinds of data structures we were teached in the course
 
-The assignment details can be found in the [assignment PDF](https://github.com/papastam/HY240_project/blob/master/HY240_project_Phase2.pdf.pdf)
+The assignment details can be found in the [assignment PDF](https://github.com/papastam/HY240_project/blob/master/HY240_project_Phase2.pdf)
 
 ## Directory structure
     
