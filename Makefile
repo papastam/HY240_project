@@ -42,6 +42,4 @@ $(EXEC): $(OBJECTS)
 
 clean:
 	rm -rf obj dep
-
-distclean: clean
-	rm -rf among_us
+	rm -rf among_us 
